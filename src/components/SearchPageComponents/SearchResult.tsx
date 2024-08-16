@@ -329,7 +329,7 @@ export default function SearchResult() {
                       View Details
                     </Link>
                     <Link
-                      href={`/searchPage/${result.id}`}
+                      href={`/search/${result.id}`}
                       className='bg-[#1ab64f] px-4 py-2 border-none rounded text-color4'>
                       Book Now
                     </Link>
