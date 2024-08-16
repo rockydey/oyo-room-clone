@@ -37,9 +37,23 @@
   margin: 0px 15px;
 }
 
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-container {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
   content: "" !important;
+}
+
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+  outline: none !important;
 }
 
 .swiper-slide img {
