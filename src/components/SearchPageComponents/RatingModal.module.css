@@ -1,0 +1,31 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  right: 163px;
+  top: 35px;
+  width: 354px;
+  height: fit-content;
+}
+
+.modalContent {
+  background-color: #fefefe;
+  margin: 0 auto;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  width: 100%;
+}
+
+.close {
+  color: #757575;
+  float: right;
+  font-size: 24px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #757575;
+  text-decoration: none;
+}
