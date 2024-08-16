@@ -7,12 +7,10 @@ interface Room {
   id: number;
   room_name: string;
   price: number;
-  images: [
-    {
-      url: string;
-      category: string;
-    }
-  ];
+  images: {
+    url: string;
+    category: string;
+  }[];
   image: string[];
   room_type: string;
   tv: string;
