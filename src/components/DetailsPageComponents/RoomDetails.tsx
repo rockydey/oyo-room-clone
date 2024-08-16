@@ -114,7 +114,7 @@ const RoomDetails = ({ room }: { room: Room }) => {
                 <Image
                   className='rounded'
                   src={room?.image[0]}
-                  alt={room.name_type}
+                  alt={room?.room_name}
                   width={200}
                   height={200}
                 />
