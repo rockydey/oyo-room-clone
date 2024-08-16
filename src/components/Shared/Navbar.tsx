@@ -61,7 +61,7 @@ export default function Navbar() {
             </ul>
           </div>
           <Link href='/' className='text-3xl font-bold text-[#2ECA7F]'>
-            Beach<span className='text-[#FFBA00]'>Bliss</span>
+            OYO<span className='text-[#FFBA00]'>Rooms</span>
           </Link>
         </div>
         <div className='navbar-end hidden lg:flex'>
