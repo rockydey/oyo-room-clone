@@ -283,10 +283,10 @@ export default function FilterSide() {
       <div className='my-6 border-b border-color8'></div>
       <div>
         <Facilities
-        // fcFilters={fcFilters}
-        // setFcFilters={setFcFilters}
-        // fcFilterList={fcFilterList}
-        // setClear={setClear}
+        fcFilters={fcFilters}
+        setFcFilters={setFcFilters}
+        fcFilterList={fcFilterList}
+        setClear={setClear}
         />
       </div>
       <div className='my-6 border-b border-color8'></div>
