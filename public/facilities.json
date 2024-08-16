@@ -1,0 +1,9 @@
+[
+  { "id": "seatingArea", "label": "Seating area" },
+  { "id": "kingBed", "label": "King Sized Bed" },
+  { "id": "queenBed", "label": "Queen Sized Bed" },
+  { "id": "miniFridge", "label": "Mini Fridge" },
+  { "id": "tv", "label": "TV" },
+  { "id": "hairDryer", "label": "Hair Dryer" },
+  { "id": "attachedWashroom", "label": "Attached Washroom" }
+]
