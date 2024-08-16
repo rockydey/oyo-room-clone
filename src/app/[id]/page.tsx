@@ -482,7 +482,7 @@ const DetailsPage = ({ params }: { params: Params }) => {
       {/* Modal */}
       <dialog id='my_modal_3' className='modal'>
         <div className='bg-[#000000] flex justify-center bg-opacity-90 items-center  min-w-full mx-auto h-screen'>
-          <div className='modal-box bg-transparent min-w-full h-screen rounded-none p-0'>
+          <div className='modal-box bg-transparent min-w-full overflow-y-hidden rounded-none p-0'>
             <form method='dialog'>
               <button className='btn z-50 text-color4 text-2xl font-bold btn-sm btn-circle btn-ghost absolute right-16 top-2'>
                 ✕

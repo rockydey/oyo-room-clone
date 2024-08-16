@@ -103,7 +103,7 @@ export default function ImageSlider({ room }: { room: Room }) {
   };
 
   return (
-    <div>
+    <div className="">
       <div className='mb-10 max-w-screen-xl mx-auto'>
         <div role='tablist' className='font-semibold'>
           <a
@@ -128,7 +128,7 @@ export default function ImageSlider({ room }: { room: Room }) {
           </a>
         </div>
       </div>
-      <div>
+      <div className="h-fit">
         <div className='max-w-screen-xl mx-auto'>
           <Swiper
             spaceBetween={10}
@@ -145,7 +145,7 @@ export default function ImageSlider({ room }: { room: Room }) {
                   src={src?.url}
                   className='block mx-auto'
                   alt={`Image ${index + 1}`}
-                  width={620}
+                  width={555}
                   height={280}
                 />
               </SwiperSlide>
