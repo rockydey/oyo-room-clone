@@ -10,14 +10,16 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import Image from "next/image";
 import "./ImageSlider.css";
 
+interface Image {
+  url: string;
+  category: "bedroom" | "washroom";
+}
+
 interface Room {
   id: number;
   room_name: string;
   price: number;
-  images: {
-    url: string;
-    category: string;
-  }[];
+  images: Image[];
   image: string[];
   room_type: string;
   tv: string;
@@ -30,10 +32,10 @@ interface Room {
 export default function ImageSlider({ room }: { room: Room }) {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
   const { images } = room;
-  const [imageShow, setImageShow] = useState(images);
+  const [imageShow, setImageShow] = useState<Image[]>(images);
   const [activeCategory, setActiveCategory] = useState("room");
-  const [roomCall, setRoomCall] = useState(false);
-  const [washroomCall, setWashroomCall] = useState(false);
+  const [roomCall, setRoomCall] = useState<boolean>(false);
+  const [washroomCall, setWashroomCall] = useState<boolean>(false);
   const roomLength = images?.filter((img) => img.category === "bedroom").length;
   const washroomLength = images?.filter(
     (img) => img.category === "washroom"

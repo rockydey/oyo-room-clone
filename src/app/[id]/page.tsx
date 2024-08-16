@@ -26,14 +26,16 @@ interface Params {
   id: string;
 }
 
+interface Image {
+  url: string;
+  category: "bedroom" | "washroom";
+}
+
 interface Room {
   id: number;
   room_name: string;
   price: number;
-  images: {
-    url: string;
-    category: string;
-  }[];
+  images: Image[];
   image: string[];
   room_type: string;
   tv: string;
@@ -70,12 +72,6 @@ const DetailsPage = ({ params }: { params: Params }) => {
     };
     console.log(booking);
   };
-
-  //   const RoomDetails: React.FC<RoomDetailsProps> = ({ room }) => {
-  //     if (!room) {
-  //       return <div>No room details available</div>;
-  //     }
-  //   };
 
   return (
     <div className=''>
