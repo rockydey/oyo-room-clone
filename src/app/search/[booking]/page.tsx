@@ -700,7 +700,7 @@ export default function BookingPage({ params }: { params: Params }) {
 
                           <div
                             className={`${
-                              file.length > 3 &&
+                              file.length &&
                               "overflow-x-hidden overflow-y-scroll"
                             } h-28 bg-color7 rounded shadow`}>
                             {file.length > 0 ? (

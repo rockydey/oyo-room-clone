@@ -104,7 +104,7 @@ export default function ImageSlider({ room }: { room: Room }) {
 
   return (
     <div>
-      <div className='mb-10 max-w-screen-xl mx-auto '>
+      <div className='mb-10 max-w-screen-xl mx-auto'>
         <div role='tablist' className='font-semibold'>
           <a
             onClick={() => {

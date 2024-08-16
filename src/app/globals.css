@@ -42,6 +42,13 @@
   content: "" !important;
 }
 
+.swiper-slide img {
+  filter: none;
+  background-color: transparent;
+  opacity: 1;
+  height: fit-content;
+}
+
 /* Input checkbox */
 .checkbox {
   width: 15px !important;
