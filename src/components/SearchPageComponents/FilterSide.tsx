@@ -8,24 +8,45 @@ import Facilities from "./Facilities";
 
 const features = [{ id: "payHotel", label: "Pay at Hotel" }];
 
+interface Category {
+  id: string;
+  title: string;
+  description: string;
+}
+
+interface Collection {
+  id: string;
+  label: string;
+}
+
+interface Facility {
+  id: string;
+  label: string;
+}
+
+interface Accom {
+  id: string;
+  label: string;
+}
+
 export default function FilterSide() {
   const [clear, setClear] = useState<boolean>(false);
   const [values, setValues] = useState<number[]>([395, 2605]);
-  const [cFilters, setCFilters] = useState({});
-  const [cFilterList, setCFilterList] = useState([]);
-  const [fcFilters, setFcFilters] = useState({});
-  const [fcFilterList, setFcFilterList] = useState([]);
-  const [acFilters, setAcFilters] = useState({});
-  const [acFilterList, setAcFilterList] = useState([]);
-  const [cateFilters, setCateFilters] = useState({});
-  const [cateFilterList, setCateFilterList] = useState([]);
-  const [payFilters, setPayFilters] = useState({});
+  const [cFilters, setCFilters] = useState<Record<string, boolean>>({});
+  const [cFilterList, setCFilterList] = useState<Collection[]>([]);
+  const [fcFilters, setFcFilters] = useState<Record<string, boolean>>({});
+  const [fcFilterList, setFcFilterList] = useState<Facility[]>([]);
+  const [acFilters, setAcFilters] = useState<Record<string, boolean>>({});
+  const [acFilterList, setAcFilterList] = useState<Accom[]>([]);
+  const [cateFilters, setCateFilters] = useState<Record<string, boolean>>({});
+  const [cateFilterList, setCateFilterList] = useState<Category[]>([]);
+  const [payFilters, setPayFilters] = useState<Record<string, boolean>>({});
   const MIN: number = 0;
   const MAX: number = 3000;
 
   useEffect(() => {
     setPayFilters(
-      features.reduce((acc, filter) => {
+      features.reduce<Record<string, boolean>>((acc, filter) => {
         acc[filter.id] = false;
         return acc;
       }, {})
@@ -35,11 +56,14 @@ export default function FilterSide() {
   useEffect(() => {
     fetch("collections.json")
       .then((res) => res.json())
-      .then((data) => {
-        const initialFilters = data.reduce((acc, filter) => {
-          acc[filter.id] = false;
-          return acc;
-        }, {});
+      .then((data: Collection[]) => {
+        const initialFilters = data.reduce<Record<string, boolean>>(
+          (acc, filter) => {
+            acc[filter.id] = false;
+            return acc;
+          },
+          {}
+        );
         setCFilters(initialFilters);
         setCFilterList(data);
       });
@@ -48,11 +72,14 @@ export default function FilterSide() {
   useEffect(() => {
     fetch("categories.json")
       .then((res) => res.json())
-      .then((data) => {
-        const initialFilters = data.reduce((acc, filter) => {
-          acc[filter.id] = false;
-          return acc;
-        }, {});
+      .then((data: Category[]) => {
+        const initialFilters = data.reduce<Record<string, boolean>>(
+          (acc, filter) => {
+            acc[filter.id] = false;
+            return acc;
+          },
+          {}
+        );
         setCateFilters(initialFilters);
         setCateFilterList(data);
       });
@@ -61,11 +88,14 @@ export default function FilterSide() {
   useEffect(() => {
     fetch("facilities.json")
       .then((res) => res.json())
-      .then((data) => {
-        const initialFilters = data.reduce((acc, filter) => {
-          acc[filter.id] = false;
-          return acc;
-        }, {});
+      .then((data: Facility[]) => {
+        const initialFilters = data.reduce<Record<string, boolean>>(
+          (acc, filter) => {
+            acc[filter.id] = false;
+            return acc;
+          },
+          {}
+        );
         setFcFilters(initialFilters);
         setFcFilterList(data);
       });
@@ -74,17 +104,20 @@ export default function FilterSide() {
   useEffect(() => {
     fetch("accomodation.json")
       .then((res) => res.json())
-      .then((data) => {
-        const initialFilters = data.reduce((acc, filter) => {
-          acc[filter.id] = false;
-          return acc;
-        }, {});
+      .then((data: Accom[]) => {
+        const initialFilters = data.reduce<Record<string, boolean>>(
+          (acc, filter) => {
+            acc[filter.id] = false;
+            return acc;
+          },
+          {}
+        );
         setAcFilters(initialFilters);
         setAcFilterList(data);
       });
   }, []);
 
-  const handleCheckboxChange = (event) => {
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
     setAcFilters((prevFilters) => ({
       ...prevFilters,
@@ -93,7 +126,7 @@ export default function FilterSide() {
     setClear(true);
   };
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
     setPayFilters((prevFilters) => ({
       ...prevFilters,
@@ -103,35 +136,38 @@ export default function FilterSide() {
   };
 
   const handleClearAll = () => {
-    const clearedFilters = cFilterList.reduce((acc, filter) => {
-      acc[filter.id] = false;
-      return acc;
-    }, {});
+    const clearedFilters = cFilterList.reduce<Record<string, boolean>>(
+      (acc, filter) => {
+        acc[filter.id] = false;
+        return acc;
+      },
+      {}
+    );
     setCFilters(clearedFilters);
 
     setCateFilters(
-      cateFilterList.reduce((acc, filter) => {
+      cateFilterList.reduce<Record<string, boolean>>((acc, filter) => {
         acc[filter.id] = false;
         return acc;
       }, {})
     );
 
     setFcFilters(
-      fcFilterList.reduce((acc, filter) => {
+      fcFilterList.reduce<Record<string, boolean>>((acc, filter) => {
         acc[filter.id] = false;
         return acc;
       }, {})
     );
 
     setAcFilters(
-      acFilterList.reduce((acc, filter) => {
+      acFilterList.reduce<Record<string, boolean>>((acc, filter) => {
         acc[filter.id] = false;
         return acc;
       }, {})
     );
 
     setPayFilters(
-      features.reduce((acc, filter) => {
+      features.reduce<Record<string, boolean>>((acc, filter) => {
         acc[filter.id] = false;
         return acc;
       }, {})
@@ -283,10 +319,10 @@ export default function FilterSide() {
       <div className='my-6 border-b border-color8'></div>
       <div>
         <Facilities
-        fcFilters={fcFilters}
-        setFcFilters={setFcFilters}
-        fcFilterList={fcFilterList}
-        setClear={setClear}
+          fcFilters={fcFilters}
+          setFcFilters={setFcFilters}
+          fcFilterList={fcFilterList}
+          setClear={setClear}
         />
       </div>
       <div className='my-6 border-b border-color8'></div>
