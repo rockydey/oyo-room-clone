@@ -241,10 +241,10 @@ export default function FilterSide() {
       <div className='my-6 border-b border-color8'></div>
       <div className=''>
         <Collections
-        // cFilterList={cFilterList}
-        // cFilters={cFilters}
-        // setCFilters={setCFilters}
-        // setClear={setClear}
+        cFilterList={cFilterList}
+        cFilters={cFilters}
+        setCFilters={setCFilters}
+        setClear={setClear}
         />
       </div>
       <div className='my-6 border-b border-color8'></div>

@@ -41,3 +41,12 @@
 .swiper-button-next::after {
   content: "" !important;
 }
+
+/* Input checkbox */
+.checkbox {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 2px !important;
+  --chkbg: #52b520 !important;
+  background-color: rgba(0, 0, 0, 0.05);
+}
