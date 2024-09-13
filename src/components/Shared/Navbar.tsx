@@ -26,7 +26,13 @@ export default function Navbar() {
   ];
 
   return (
-    <div className={`${pathName === "/privacy-policy" ? "hidden" : "block"}`}>
+    <div
+      className={`${
+        pathName === "/privacy-policy" || pathName === "/about"
+          ? "hidden"
+          : "block"
+      }`}
+    >
       <div className="navbar bg-base-100 max-w-screen-xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
