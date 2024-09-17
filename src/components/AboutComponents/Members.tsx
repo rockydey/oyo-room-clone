@@ -10,17 +10,17 @@ import styles from "./Members.module.css";
 
 const Members = () => {
   return (
-    <div className="flex overflow-hidden items-end">
+    <div className="flex overflow-auto lg:overflow-hidden items-end">
       <div className="group">
-        <div className="bg-[#131313] duration-700 -mr-28 group-hover:mr-0 h-[680px]">
-          <div className="group-hover:px-5 h-[33%] pt-[85px] group-hover:pt-5">
-            <h3 className="text-4xl group-hover:hidden text-color8 -rotate-90 font-bold text-nowrap">
+        <div className="bg-[#131313] duration-700 lg:-mr-28 group-hover:mr-0 h-[680px]">
+          <div className="group-hover:px-5 h-[33%] pt-[85px] group-hover:pt-5 px-5 lg:px-0">
+            <h3 className="text-4xl hidden lg:block group-hover:hidden text-color8 -rotate-90 font-bold text-nowrap">
               Ritesh Agarwal
             </h3>
-            <h3 className="text-4xl text-color8  hidden group-hover:block font-bold text-nowrap mb-5">
+            <h3 className="text-4xl text-color8  lg:hidden group-hover:block font-bold text-nowrap mb-5">
               Ritesh Agarwal
             </h3>
-            <p className="text-color7 text-base font-normal leading-tight hidden group-hover:block">
+            <p className="text-color7 text-base font-normal leading-tight lg:hidden group-hover:block">
               OYO Hotels & Homes was founded by Ritesh Agarwal, the first
               resident Asian to be accepted to the Thiel Fellowship (started by
               Paypal founder Peter Thiel). Travelling across India at the age of
@@ -42,15 +42,15 @@ const Members = () => {
         </div>
       </div>
       <div className="group">
-        <div className="bg-[#2C2A2A] duration-700 -mr-28 group-hover:mr-0 h-[680px]">
-          <div className="group-hover:px-5 h-[33%] pt-[85px] group-hover:pt-5">
-            <h3 className="text-4xl group-hover:hidden text-color8 -rotate-90 font-bold text-nowrap">
+        <div className="bg-[#2C2A2A] duration-700 lg:-mr-28 group-hover:mr-0 h-[680px]">
+          <div className="group-hover:px-5 h-[33%] pt-[85px] group-hover:pt-5 px-5 lg:px-0">
+            <h3 className="text-4xl hidden lg:block group-hover:hidden text-color8 -rotate-90 font-bold text-nowrap">
               Ritesh Agarwal
             </h3>
-            <h3 className="text-4xl text-color8  hidden group-hover:block font-bold text-nowrap mb-5">
+            <h3 className="text-4xl text-color8  lg:hidden group-hover:block font-bold text-nowrap mb-5">
               Ritesh Agarwal
             </h3>
-            <p className="text-color7 text-base font-normal leading-tight hidden group-hover:block">
+            <p className="text-color7 text-base font-normal leading-tight lg:hidden group-hover:block">
               OYO Hotels & Homes was founded by Ritesh Agarwal, the first
               resident Asian to be accepted to the Thiel Fellowship (started by
               Paypal founder Peter Thiel). Travelling across India at the age of
@@ -72,15 +72,15 @@ const Members = () => {
         </div>
       </div>
       <div className="group">
-        <div className="bg-[#202020] duration-700 -mr-28 group-hover:mr-0 h-[680px]">
-          <div className="group-hover:px-5 h-[33%] pt-[85px] group-hover:pt-5">
-            <h3 className="text-4xl group-hover:hidden text-color8 -rotate-90 font-bold text-nowrap">
+        <div className="bg-[#202020] duration-700 lg:-mr-28 group-hover:mr-0 h-[680px]">
+          <div className="group-hover:px-5 h-[33%] pt-[85px] group-hover:pt-5 px-5 lg:px-0">
+            <h3 className="text-4xl hidden lg:block group-hover:hidden text-color8 -rotate-90 font-bold text-nowrap">
               Ritesh Agarwal
             </h3>
-            <h3 className="text-4xl text-color8  hidden group-hover:block font-bold text-nowrap mb-5">
+            <h3 className="text-4xl text-color8  lg:hidden group-hover:block font-bold text-nowrap mb-5">
               Ritesh Agarwal
             </h3>
-            <p className="text-color7 text-base font-normal leading-tight hidden group-hover:block">
+            <p className="text-color7 text-base font-normal leading-tight lg:hidden group-hover:block">
               OYO Hotels & Homes was founded by Ritesh Agarwal, the first
               resident Asian to be accepted to the Thiel Fellowship (started by
               Paypal founder Peter Thiel). Travelling across India at the age of
@@ -102,15 +102,15 @@ const Members = () => {
         </div>
       </div>
       <div className="group">
-        <div className="bg-[#222323] duration-700 -mr-28 group-hover:mr-0 h-[680px]">
-          <div className="group-hover:px-5 h-[33%] pt-[85px] group-hover:pt-5">
-            <h3 className="text-4xl group-hover:hidden text-color8 -rotate-90 font-bold text-nowrap">
+        <div className="bg-[#222323] duration-700 lg:-mr-28 group-hover:mr-0 h-[680px]">
+          <div className="group-hover:px-5 h-[33%] pt-[85px] group-hover:pt-5 px-5 lg:px-0">
+            <h3 className="text-4xl hidden lg:block group-hover:hidden text-color8 -rotate-90 font-bold text-nowrap">
               Ritesh Agarwal
             </h3>
-            <h3 className="text-4xl text-color8  hidden group-hover:block font-bold text-nowrap mb-5">
+            <h3 className="text-4xl text-color8  lg:hidden group-hover:block font-bold text-nowrap mb-5">
               Ritesh Agarwal
             </h3>
-            <p className="text-color7 text-base font-normal leading-tight hidden group-hover:block">
+            <p className="text-color7 text-base font-normal leading-tight lg:hidden group-hover:block">
               OYO Hotels & Homes was founded by Ritesh Agarwal, the first
               resident Asian to be accepted to the Thiel Fellowship (started by
               Paypal founder Peter Thiel). Travelling across India at the age of
@@ -132,15 +132,15 @@ const Members = () => {
         </div>
       </div>
       <div className="group">
-        <div className="bg-[#232324] duration-700 -mr-28 group-hover:mr-0 h-[680px]">
-          <div className="group-hover:px-5 h-[33%] pt-[85px] group-hover:pt-5">
-            <h3 className="text-4xl group-hover:hidden text-color8 -rotate-90 font-bold text-nowrap">
+        <div className="bg-[#232324] duration-700 lg:-mr-28 group-hover:mr-0 h-[680px]">
+          <div className="group-hover:px-5 h-[33%] pt-[85px] group-hover:pt-5 px-5 lg:px-0">
+            <h3 className="text-4xl hidden lg:block group-hover:hidden text-color8 -rotate-90 font-bold text-nowrap">
               Ritesh Agarwal
             </h3>
-            <h3 className="text-4xl text-color8  hidden group-hover:block font-bold text-nowrap mb-5">
+            <h3 className="text-4xl text-color8  lg:hidden group-hover:block font-bold text-nowrap mb-5">
               Ritesh Agarwal
             </h3>
-            <p className="text-color7 text-base font-normal leading-tight hidden group-hover:block">
+            <p className="text-color7 text-base font-normal leading-tight lg:hidden group-hover:block">
               OYO Hotels & Homes was founded by Ritesh Agarwal, the first
               resident Asian to be accepted to the Thiel Fellowship (started by
               Paypal founder Peter Thiel). Travelling across India at the age of
@@ -162,15 +162,15 @@ const Members = () => {
         </div>
       </div>
       <div className="group">
-        <div className="bg-[#202020] duration-700 -mr-28 group-hover:mr-0 h-[680px]">
-          <div className="group-hover:px-5 h-[33%] pt-[85px] group-hover:pt-5">
-            <h3 className="text-4xl group-hover:hidden text-color8 -rotate-90 font-bold text-nowrap">
+        <div className="bg-[#202020] duration-700 lg:-mr-28 group-hover:mr-0 h-[680px]">
+          <div className="group-hover:px-5 h-[33%] pt-[85px] group-hover:pt-5 px-5 lg:px-0">
+            <h3 className="text-4xl hidden lg:block group-hover:hidden text-color8 -rotate-90 font-bold text-nowrap">
               Ritesh Agarwal
             </h3>
-            <h3 className="text-4xl text-color8  hidden group-hover:block font-bold text-nowrap mb-5">
+            <h3 className="text-4xl text-color8  lg:hidden group-hover:block font-bold text-nowrap mb-5">
               Ritesh Agarwal
             </h3>
-            <p className="text-color7 text-base font-normal leading-tight hidden group-hover:block">
+            <p className="text-color7 text-base font-normal leading-tight lg:hidden group-hover:block">
               OYO Hotels & Homes was founded by Ritesh Agarwal, the first
               resident Asian to be accepted to the Thiel Fellowship (started by
               Paypal founder Peter Thiel). Travelling across India at the age of

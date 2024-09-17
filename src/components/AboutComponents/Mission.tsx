@@ -35,8 +35,8 @@ const Mission = () => {
     setModalIsOpen(false);
   }
   return (
-    <div className="flex gap-[2%]">
-      <div className="space-y-4 w-[30%] ml-[125px]">
+    <div className="flex flex-col lg:flex-row lg:gap-[2%] gap-6">
+      <div className="space-y-4 lg:w-[30%] lg:ml-[125px] px-5 lg:px-0">
         <h1 className="text-7xl font-bold text-color3">
           Our <span className="block">Mission</span>
         </h1>
@@ -47,7 +47,7 @@ const Mission = () => {
           trusted accommodation that guests can book instantly.
         </p>
       </div>
-      <div className="w-[68%] relative">
+      <div className="lg:w-[68%] relative">
         <Image
           src={missionPng}
           width={400}
@@ -57,7 +57,7 @@ const Mission = () => {
         />
         <button
           onClick={openModal}
-          className="absolute top-[45%] right-[45%] bg-color4 text-xl p-8 rounded-full"
+          className="absolute lg:top-[45%] lg:right-[45%] top-[45%] left-[40%] bg-color4 lg:text-xl text-lg p-5 lg:p-8 rounded-full"
         >
           <FaPlay />
         </button>
