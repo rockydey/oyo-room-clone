@@ -4,6 +4,7 @@ import Image from "next/image";
 import Mission from "@/components/AboutComponents/Mission";
 import oyoGridImg from "../../../public/assets/oyogrid.jpeg";
 import Details from "@/components/AboutComponents/Details";
+import Members from "@/components/AboutComponents/Members";
 
 const AboutPage = () => {
   return (
@@ -30,6 +31,9 @@ const AboutPage = () => {
       </div>
       <div className="pt-10">
         <Details />
+      </div>
+      <div>
+        <Members />
       </div>
     </div>
   );
