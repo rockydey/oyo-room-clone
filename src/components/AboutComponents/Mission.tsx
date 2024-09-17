@@ -57,7 +57,7 @@ const Mission = () => {
         />
         <button
           onClick={openModal}
-          className="absolute lg:top-[45%] lg:right-[45%] top-[45%] left-[40%] bg-color4 lg:text-xl text-lg p-5 lg:p-8 rounded-full"
+          className="absolute top-[45%] right-[45%] bg-color4 lg:text-xl text-lg p-5 lg:p-8 rounded-full"
         >
           <FaPlay />
         </button>
